@@ -1,5 +1,3 @@
 *.txt
 bin/
 Documentation/
-src/Source.cpp
-test_Makefile
