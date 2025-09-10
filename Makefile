@@ -33,8 +33,8 @@ all : prepare $(call make_bin_path, $(OBJ))
 	@ar rcs $(TARGET_LIB) $(call make_bin_path, $(OBJ))
 	@echo Compilation end
 
-test : $(call make_bin_path, main) all
-	$(CXX) $(CXX_FLAGS) $(call make_bin_path, main) -L$(LIB_DIR) -lColored_printf -o $(TARGET)
+test : all $(call make_bin_path, main)
+	@$(CXX) $(CXX_FLAGS) $(call make_bin_path, main) -L$(LIB_DIR) -lColored_printf -o $(TARGET)
 
 prepare :
 	@mkdir -p bin bin/static
