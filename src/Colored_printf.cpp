@@ -7,7 +7,8 @@
 /*!
  *Is identical to printf, but uses color
 
- *\param[in] color The desired color for printf
+ *\param[in] foreground_color The desired color for symbols
+ *\param[in] background_color The desired color for background
  *\param[in] format The format to passed to printf
  *\param[in, out] others The arguments to passed to printf
 
