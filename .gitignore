@@ -1,5 +1,5 @@
 *.txt
-bin/*
-!bin/static/
+bin/
 Documentation/
 src/Source.cpp
+test_Makefile
