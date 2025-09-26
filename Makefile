@@ -35,6 +35,7 @@ all : prepare $(call make_bin_path, $(OBJ))
 
 test : all $(call make_bin_path, main)
 	@$(CXX) $(CXX_FLAGS) $(call make_bin_path, main) -L$(LIB_DIR) -lColored_printf -o $(TARGET)
+	@$(TARGET)
 
 prepare :
 	@mkdir -p bin bin/static
