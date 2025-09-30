@@ -6,8 +6,7 @@
 /*!
  *Contains colors than can be used to write in concole
  */
-enum Color
-{
+enum Color {
     BLACK,   ///<Black color
     RED,     ///<Red color
     GREEN,   ///<Green color

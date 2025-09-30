@@ -8,8 +8,7 @@
 
  *\return Returns error code of running this program
  */
-int main()
-{
+int main() {
     colored_printf(GREEN, WHITE, "Hello world!");
 
     colored_printf(RED, BLACK, "\n\n\nCommit GitHub\n\n");

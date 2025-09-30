@@ -15,8 +15,7 @@
  *\return Returns value equal to value returned by printf
  */
 int colored_printf(enum Color const foreground_color, enum Color const background_color,
-                   char const *const format, ...)
-{
+                   char const *const format, ...) {
     printf("\033[%d;%dm", 30 + foreground_color, 40 + background_color);
 
     va_list arg_list = nullptr;
