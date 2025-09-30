@@ -8,7 +8,8 @@ make_src_path = $(addprefix $(SRC_DIR), $(addsuffix $(SRC_SUF), $(1)))
 
 H_DIR = include/
 
-LIB_DIR = bin/static/
+LIB_DIR = static_libs/
+LIBS = Colored_printf
 
 CXX = g++
 CXX_FLAGS = -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline   \
@@ -34,18 +35,19 @@ all : prepare $(call make_bin_path, $(OBJ))
 	@echo Compilation end
 
 test : all $(call make_bin_path, main)
-	@$(CXX) $(CXX_FLAGS) $(call make_bin_path, main) -L$(LIB_DIR) -lColored_printf -o $(TARGET)
+	@$(CXX) $(CXX_FLAGS) $(call make_bin_path, main) -L$(LIB_DIR) $(addprefix -l, $(LIBS)) \
+	-o $(TARGET)
 	@$(TARGET)
 
 prepare :
-	@mkdir -p bin bin/static
+	@mkdir -p bin static_libs
 
 $(call make_object, Colored_printf)
 
 $(call make_object, main)
 
 clean:
-	@rm -rf bin Documentation
+	@rm -rf bin static_libs Documentation
 
 documentation: Doxyfile
 	@doxygen Doxyfile
