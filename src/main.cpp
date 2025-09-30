@@ -9,8 +9,8 @@
  *\return Returns error code of running this program
  */
 int main() {
-    colored_printf(GREEN, WHITE, "Hello world!");
+    colored_error_printf(RED, BLACK, "Something wrong");
 
-    colored_printf(RED, BLACK, "\n\n\nCommit GitHub\n\n");
+    colored_printf(GREEN, BLACK, "\n\n\nCommit GitHub\n\n");
     return 0;
 }

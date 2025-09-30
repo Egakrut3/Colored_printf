@@ -20,4 +20,7 @@ enum Color {
 int colored_printf(enum Color foreground_color, enum Color background_color,
                    char const *format, ...);
 
+int colored_error_printf(enum Color foreground_color, enum Color background_color,
+                         char const *format, ...);
+
 #endif
